@@ -1,34 +1,16 @@
 ## Final Project: Script 1
 ### Web-scraping Weather Forecast Information with Python
-In this lab, you will work with a script that scrapes the 5-day weather forecast from the National Weather Service website. The script extracts information from multiple elements listed under the same class name using the BeautifulSoup library. 
+The purpose of script 1 of the final project was to edit a script that scrapes 5-day weather forecast from the National Weather Service website. The repository already contained a python file that scraped weather data of Worcester, Massachusetts. This script already specified the latitude and longitude coordinates for the location it wanted to scrape the weather for (Worcester, MA). Using the latitude and longitude coordinates, it generates a URL for the weather forecast webpage of the specified location through string concatenation. After locating the information on the webpage that was produced in the output I noticed that all forecasts in this section are located in the forecast-tombstone class inside the li tag. The findAll() function helped to scrape the weather data for 5 days that was located in this section.
 
-- Download the `NWS_WeatherForecast.py` file and run it in your local IDE or open it, then copy/paste it into a code cell in a new Colab notebook.
+I altered the script by using the input function to input any latitude and longitude coordinate in order to check the 5-day weather forecast for any location. I also converted the input to string in order to generate the URL for the weather of the selected location. The output had spacing issues-there were words in the output that did not have spaces in between. I used the replace function in order to replace the words with missing spaces with correct spacing. The last part of the script required me to produce the output in uppercase letters. Using the appropriate function ‘day=day.upper()’ this helped to change the output of the weather forecast for all 5 days in uppercase. 
 
-- Read the description and comments in the script to understand the purpose of the script
+This lab involving web scraping will be useful in the future as it can help me gather a large amount of data and analyze it. This can be useful for things such as monitoring prices and tracking news.
 
-- Run the script. You will see some packages being installed when you run it for the first time.
-
-- The script returns the 5-day forecast for Worcester, MA (Lat: 42.2634, Lon: -71.8022) with the latitude and longitude information provided. Using the latitude and longitude values, it generates the following URL through string concatenation: https://forecast.weather.gov/MapClick.php?lat=42.2634&lon=-71.8022
-
-- Open this URL in a Firefox or Chrome browser. Locate the information that is being outputted in our script. Right click on this and select the Inspect Element option. This will launch the Inspector window that helps locate different elements on the page.
-
-- Notice that all forecast containers in this section are located in the _forecast-tombstone_ class inside the _li_ tag. In order to scrape multiple elements listed under the same class name, we utilize the _findAll()_ function from BeautifulSoup. The tag and class names are required arguments for this function.
-
-### Edit the NWS_ WeatherForecast.py script to add the following functionality:
-1. Take latitude and longitude values as inputs in decimal degrees from user
-
-2.	Convert the latitude and longitude values to strings to generate the URL for the selected location. Pass this URL as an argument in the _get()_ request.
-
-3.	The returned forecast information did not preserve its spacing during the scraping process. Using the _replace()_ function, fix any spacing issues with the output
-
-4.	Convert the final output to uppercase
-
-Remember to update the Script1.py file to include comments and documentation in your script to tell me what it’s doing!
 
 ## Final Project: Script 2
 ### Your Chosen Assignment
-For this script, you will complete the assignment that you have proposed, which involves creating a new script, completing an online tutorial, or modifying a previous exercise or lab. You'll need to save that file or notebook into this repo: be sure to include comments and documentation in your script to tell me what it’s doing!
+The purpose of script 2 of the final project was to graphically analyze the gender gap in average hourly wages in different countries. I imported a CSV file and used it to view the data on Colab and plot a graph for the pattern of wage gap in different countries.
+The data was obtained from the International Labor Organization (ILO). It provides data for the wage gap in different countries for a number of years. It can allow viewers to see the pattern of wage gap over time in a specific country and also allows us to compare the pattern of wage gap in different countries.
+With the help of internet searches, involving YouTube and different webpages, I learnt and understood how to import a CSV file in Google Colab (Since I used Colab for the final project) and view and graphically analyze data using the dataset. I was confused about how to import a CSV file but then this website https://towardsdatascience.com/3-ways-to-load-csv-files-into-colab-7c14fcbdcb92 helped me figure out how to correctly import it on Colab. I also installed the relevant libraries (Pandas and Matplotlib) for data and graphical analysis. This YouTube tutorial https://www.youtube.com/watch?v=a9UrKTVEeZA&t=885s helped me analyze data on Python using Matplotlib and Pandas.
+My aim was to compare the pattern of wage gap of any two countries so I picked Germany and France. First, I wanted to view the data for Germany and France separately, so I specified the country I wanted to check the data for. I also wanted to graphically compare the gender wage gap between the two countries. Using pyplot, I made a graph for Germany and France  with ‘years’ on the x axis and ‘gender wage gap in percentage’ on the y axis. The results showed that France had a much lower wage gap as compared to Germany- less than 16% from 2006 onwards, whereas for Germany the wage gap was around 22% for the same time period. Both the countries follow a similar pattern- the wage gap decreasing initially then staying relatively stable. 
 
-## Final Project: Documentation
-### Changing this README
-Your write-up will be here, on this README page. You will need to edit this page with your new text: you do **not** need to keep these instructions on your README! 
